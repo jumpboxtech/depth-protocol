@@ -1,0 +1,67 @@
+{
+  "name": "@depth-protocol/sdk",
+  "version": "1.0.0",
+  "description": "Depth Protocol SDK — Agent infrastructure on Stacks with x402 payments, bonding curves, reputation, and task markets.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./client": {
+      "types": "./dist/client.d.ts",
+      "import": "./dist/client.js"
+    },
+    "./server": {
+      "types": "./dist/server.d.ts",
+      "import": "./dist/server.js"
+    },
+    "./agents": {
+      "types": "./dist/agent-client.d.ts",
+      "import": "./dist/agent-client.js"
+    },
+    "./reader": {
+      "types": "./dist/agent-reader.d.ts",
+      "import": "./dist/agent-reader.js"
+    }
+  },
+  "bin": {
+    "depth-init": "./dist/init.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "stacks",
+    "bitcoin",
+    "x402",
+    "agents",
+    "bonding-curve",
+    "clarity",
+    "depth",
+    "micropayments"
+  ],
+  "author": "Jumpbox <hello@jumpbox.tech>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jumpboxtech/depth-protocol"
+  },
+  "homepage": "https://deepstx.app",
+  "peerDependencies": {
+    "@stacks/transactions": ">=7.0.0"
+  },
+  "devDependencies": {
+    "@stacks/transactions": "^7.4.0",
+    "@types/node": "^25.5.2",
+    "typescript": "^5.7.0"
+  }
+}
